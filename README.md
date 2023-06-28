@@ -1,2 +1,2 @@
 # frontend_template
-# page contains a website template.
+# page folder contains a website template.
