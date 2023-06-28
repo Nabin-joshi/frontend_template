@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Login</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <!-- <link rel="shortcut icon" type="image/png"  href="favicon.ico"> -->
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href="resources/css/styles.css" rel="stylesheet" type='text/css' />
+        <link href="resources/css/ui.datepicker.css" rel="stylesheet"/>
+        <link href="resources/css/ui.all.css" rel="stylesheet"/>
+        <link href="resources/css/group-combo.css" rel="stylesheet" type='text/css' />
+
+        <script type="text/javascript" src="resources/js/jquery.js"></script>
+        <!--<script type="text/javascript" src="resources/js/jquery-ui-1.7.3.custom.js"></script>-->
+        <script type="text/javascript" src="resources/js/jquery-ui-1.8.24.custom.min.js"></script>
+        <script type="text/javascript" src="resources/js/ui.core.js"></script>
+        <script type="text/javascript" src="resources/js/jquery.jstree.js"></script>
+        <script type="text/javascript" src="resources/js/tablesorter.js"></script>
+        <script type="text/javascript" src="resources/js/tablesorterpager.js"></script>
+        <script type="text/javascript" src="resources/js/ui.datepicker.js"></script>
+        <script type="text/javascript" src="resources/js/application-script.js"></script>
+        <script type="text/javascript" src="resources/js/master-data-layouts-script.js"></script>
+        <!--[if IE]>
+        <link href="resources/css/ie-styles.css" rel="stylesheet"/>
+        <![endif]-->
+        
+	</head>
+  <body>
+    <div id="pageWrapper" class="pageWrapper">
+<div class="loginBodyWrapper border-rad">
+			<div class="fleft logoLoginWrapper">
+				<div class="loginLogoWrapper">
+					<img src="resources/images/login-logo.png" alt="Pricer"/>
+				</div>
+				<div class="loginBox border-rad">
+					<form id="authenticate" action="login" method="post">
+						<div>
+							<table class="loginBoxTable">
+								<tr>
+									<td class="labelColumn">Username:</td>
+									<td class="inputColumn">
+										<input type="text" name="username" class="inputText mandatory" />
+										<span class="validationMsg"><br/>Please enter valid username.</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="labelColumn">Password:</td>
+									<td class="inputColumn">
+									   <input type="password" name="password" class="inputText mandatory pwdField" />
+									   <span class="validationMsg"><br/>Please enter valid password.</span>
+									</td>
+								</tr>								
+								<tr>
+									<td class="labelColumn"></td>
+									<td class="inputColumn">
+										<input type="button" class="submit_btn border-rad" id="loginButton" value="Log In" />
+										<!-- <a href="" class="genLink">Forgot Password</a> -->
+									</td>
+								</tr>
+							</table>
+						</div>	
+					</form>
+				</div>
+			</div>
+			<div class="cboth"></div>
+		</div>
+    	<div class="footerWrapper">
+	<div class="copyrightDiv">				
+		&copy; 2023 iShani Technology.
+	</div>
+</div>
+    </div>
+  </body>
+</html>

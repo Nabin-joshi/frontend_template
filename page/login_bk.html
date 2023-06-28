@@ -1,0 +1,248 @@
+<div class="logoutDiv">
+	<div class="fright">
+		<a href="/logout">
+			<img src="resources/images/logout-bg.png" class="logoutImage">
+			<span>logout</span>
+		</a>
+	</div>
+	<div class="cboth"></div>
+</div>
+<div class="headerNav">
+	<div class="fleft">
+		<img src="resources/images/logo.png" alt="Pricer Manager">
+	</div>
+	<div class="fright mainNavWrapper">
+		<ul class="mainNavList">
+			<li>
+				<a href="" id="configurationLink">
+					<img src="resources/images/configuration-bg.png">
+					<span>Configuration</span>
+				</a>
+			</li>
+			<li>
+				<a href="" id="pricingPreferencesLink">
+					<img src="resources/images/pricing-bg.png">
+					<span>Pricing Preferences</span>
+				</a>
+			</li>
+			<li>
+				<a href="" id="administratorLink">
+					<img src="resources/images/administrator-bg.png">
+					<span>Administrator</span>
+				</a>
+			</li>
+			<li>
+				<a href="" id="reportsLink">
+					<img src="resources/images/reports-bg.png">
+					<span>Reports</span>
+				</a>
+			</li>
+			<li class="last-child">
+				<a href="" id="helpLink">
+					<img src="resources/images/help-bg.png">
+					<span>Help</span>
+				</a>
+				<div class="helpDropdown" id="helpDropDownList">
+					<ul class="helpOptionsList">
+						<li class="">
+							<a href="">SC Pricer Maintenance Help</a>
+						</li>
+						<li class="">
+							<a href="">About Price</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="cboth"></div>
+</div>
+<div class="subNavWrapper">
+	<div class="selectViewTab fleft">
+		<a href="" class="viewTabSelect" id="viewTabLink">
+			<span>View Tab</span>
+			<img src="resources/images/th-sort-down.png"/>
+		</a>
+		<div class="helpDropdown" id="viewTabOptions">
+			<ul class="helpOptionsList viewTabOptionsList">
+				<li class="">
+					<label for="masterDataVisual">
+						<input type="checkbox" class="checkboxTab" <c:if test="${UI_CONFIGURATION['VIEW_TAB_MASTER_DATA'] == 'visible'}">checked </c:if> tabView="masterDataTab" id="masterDataVisual"/>
+						<span>Master Data</span>
+					</label>	
+				</li>
+				<li class="">
+					<label for="pricingTypeVisual">
+						<input type="checkbox" class="checkboxTab" <c:if test="${UI_CONFIGURATION['VIEW_TAB_PRICING_TYPES_N_SEQ'] == 'visible'}">checked </c:if> tabView="pricingTypeTab" id="pricingTypeVisual"/>
+						<span>Pricing Types &amp; Sequences</span>
+					</label>	
+				</li>
+				<li class="">
+					<label for="groupComboVisual">
+						<input type="checkbox" class="checkboxTab" <c:if test="${UI_CONFIGURATION['VIEW_TAB_GROUP_COMBO'] == 'visible'}">checked </c:if> tabView="groupComboTab" id="groupComboVisual"/>
+						<span>Group Combo &amp; Attributes</span>
+					</label>	
+				</li>
+				<li class="">
+					<label for="testingVisual">
+						<input type="checkbox" class="checkboxTab" <c:if test="${UI_CONFIGURATION['VIEW_TAB_TESTING'] == 'visible'}">checked </c:if> tabView="testingTab" id="testingVisual"/>
+						<span>Testing</span>
+					</label>	
+				</li>
+				<li class="">
+					<label for="hierarchyVisual">
+						<input type="checkbox" class="checkboxTab" <c:if test="${UI_CONFIGURATION['VIEW_TAB_HIERARCHIES'] == 'visible'}">checked </c:if> tabView="hierarchyTab" id="hierarchyVisual"/>
+						<span>Hierarchies</span>
+					</label>	
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- <div class="fright rotateTextChange">
+		<div class="rotateChange fleft">
+			<a href="" class="fleft">
+				<img src="resources/images/clockwise-bg.png">
+			</a>
+			<a href="" class="fleft">
+				<img src="resources/images/anticlockwise-bg.png">
+			</a>
+		</div>
+		<div class="textChange fright">
+			<ul>
+				<li class="adjustText">
+					Adjust font size: 
+				</li>
+				<li>
+					<a href="" class="smallest">A</a>
+				</li>
+				<li>
+					<a href="" class="bigger">A</a>
+				</li>
+				<li>
+					<a href="" class="biggest">A</a>
+				</li>
+			</ul>
+		</div>
+	</div> -->
+	<div class="cboth"></div>
+</div>
+
+<!--Page Overlay Popup-->
+<div class="pageOverlay"></div>
+
+<!-- Layout Options Popups -->
+<div class="layoutOptionsLinks">
+	<a href="" class="chooseLayout" id="chooseLayoutLink">Choose Layout</a>
+</div>
+
+<div class="popupWrapper" id="chooseLayoutOptionsPopup" style="display:none">
+	<%@ include file="chooseLayoutMasterDataPopup.jspf" %>
+</div>
+
+<!-- Pane Selection in Layout Popup -->
+<div class="popupWrapper" id="paneSelectionPopup" style="">
+	<%@ include file="paneArrangementPopup.jspf" %>
+</div>
+
+<!--- Configuration Popup -->
+<div class="popupWrapper" id="configurationSettingPopup" style="display:none;">
+	<%@ include file="configurationPopup.jspf" %>
+</div>	
+
+<div class="popupWrapper" id="pricingPreferencePopup" style="display:none;">
+	<%@ include file="pricingPreferencesPopup.jspf" %>
+</div>	
+
+<div class="popupWrapper popupwrapperSmall" id="administratorPopup" style="display:none;">
+	<%@ include file="administratorPopup.jspf" %>
+</div>		
+
+<div class="popupWrapper popupwrapperSmall" id="recordsPerPagePopUp" style="display:none;">
+    <%@ include file="recordsPerPageOption.jspf" %>
+</div>  
+
+<div class="popupWrapper" id="reportsPopup" style="display:none;">
+	<%@ include file="reportsPopup.jspf" %>
+</div>		
+
+<div class="popupWrapper popupwrapperSmall" id="newReportQueryPopup">
+	<%@ include file="newReportQuery.jspf" %>
+</div>
+
+<div class="popupWrapper alertConfPopup" id="alertPopup">
+	<%@ include file="alertPopup.jspf" %>
+</div>
+
+<div class="errorMessageDiv notifDiv" id="innerNotifDiv">
+	<div class="posRel">
+		<div class="successMessageDiv">Mesaage will come here</div>
+	   <a href="" class="closeLoginError closeInnerNotif">
+			<img src="resources/images/closeloginerror.png"/>
+		</a>
+	</div>
+</div>
+            	<div class="errorMessageDiv">
+	             
+				 
+	               <a href="" class="closeLoginError" id="closeLoginError">
+	            		<img src="resources/images/closeloginerror.png"/>
+	            	</a>
+		        </div>
+          
+        <script type="text/javascript">
+			$(function(){
+				$('#closeLoginError').live('click', function(){
+					$(this).parents('.errorMessageDiv').hide();
+					return false;
+				})
+			})
+		</script>
+	    <div class="loginBodyWrapper border-rad">
+			<div class="fleft logoLoginWrapper">
+				<div class="loginLogoWrapper">
+					<img src="resources/images/login-logo.png" alt="Pricer"/>
+				</div>
+				<div class="loginBox border-rad">
+					<form id="authenticate" action="login" method="post">
+						<div>
+							<table class="loginBoxTable">
+								<tr>
+									<td class="labelColumn">Username:</td>
+									<td class="inputColumn">
+										<input type="text" name="username" class="inputText mandatory" />
+										<span class="validationMsg"><br/>Please enter valid username.</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="labelColumn">Password:</td>
+									<td class="inputColumn">
+									   <input type="password" name="password" class="inputText mandatory pwdField" />
+									   <span class="validationMsg"><br/>Please enter valid password.</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="labelColumn">Client ID:</td>
+									<td class="inputColumn">
+									   <input type="text" name="clientId" class="inputText mandatory" />
+									   <span class="validationMsg"><br/>Please enter valid client id.</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="labelColumn"></td>
+									<td class="inputColumn">
+										<input type="button" class="submit_btn border-rad" id="loginButton" value="Log In" />
+										<!-- <a href="" class="genLink">Forgot Password</a> -->
+									</td>
+								</tr>
+							</table>
+						</div>	
+					</form>
+				</div>
+			</div>
+			<div class="cboth"></div>
+		</div>
+    <div class="footerWrapper">
+	<div class="copyrightDiv">				
+		&copy; 2023 iShani Technology
+	</div>
+</div>

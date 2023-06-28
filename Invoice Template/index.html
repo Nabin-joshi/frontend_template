@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debit Note Invoice</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: #ffffff;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header img {
+        margin-right: 20px;
+        max-width: 100px;
+        height: auto;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin: 0;
+        color: #212121;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      section {
+        padding: 40px 30px;
+        background-color: #ffffff;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        margin: 40px 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 15px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f7f7f7;
+        font-weight: bold;
+        color: #212121;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .subtotal {
+        text-align: right;
+        font-weight: bold;
+        font-size: 18px;
+        color: #212121;
+        margin-top: 20px;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+        background-color: #f7f7f7;
+        color: #212121;
+        padding: 15px;
+        margin-top: 30px;
+      }
+
+      .reason {
+        margin-top: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+        color: #212121;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        color: #212121;
+        line-height: 1.5;
+      }
+
+      .invoice-number,
+      .date {
+        display: inline-block;
+        font-size: 16px;
+        color: #212121;
+      }
+
+      .invoice-number {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .date {
+        float: right;
+      }
+
+      .customer-info {
+        margin-bottom: 30px;
+      }
+
+      .customer-info h2 {
+        margin-top: 0;
+      }
+
+      .shipping,
+      .discount {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #212121;
+        text-align: right;
+      }
+
+      .tax,
+      .shipping,
+      .discount,
+      .total {
+        border-top: 1px solid #ccc;
+        padding-top: 15px;
+      }
+
+      .tax,
+      .shipping,
+      .discount {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="[Your Company Logo]" alt="company logo" />
+      <h1>Debit Note Invoice</h1>
+    </header>
+    <section>
+      <div>
+        <p>Invoice Number: [Enter Invoice Number]</p>
+        <p style="text-align: right">Date: [Enter Date]</p>
+      </div>
+      <div>
+        <h2>Bill To:</h2>
+        <p>[Enter Customer Name]</p>
+        <p>[Enter Customer Address]</p>
+        <p>[Enter Customer Phone Number]</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Description of Goods/Services</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>[Enter Description]</td>
+            <td>[Enter Quantity]</td>
+            <td>[Enter Unit Price]</td>
+            <td>[Enter Total Amount]</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="subtotal">Subtotal: [Enter Subtotal Amount]</div>
+      <p style="text-align: right">Tax: [Enter Tax Amount]</p>
+      <p style="text-align: right">Shipping: [Enter Shipping Amount]</p>
+      <p style="text-align: right">Discount: [Enter Discount Amount]</p>
+      <div class="total">Total: [Enter Total Amount]</div>
+    </section>
+  </body>
+</html>
